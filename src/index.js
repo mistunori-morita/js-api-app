@@ -1,3 +1,5 @@
-import text from './test.js';
+import Form from './Form';
 
-document.querySelector('#root').innerText = text;
+
+
+const form = new Form();
