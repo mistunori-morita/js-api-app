@@ -4,9 +4,10 @@ const API_URL = 'https://api.github.com/users';
 
 
 class Form {
-  constructor(addCard) {
+  constructor(addCard, clearCards) {
 
     this.addCard = addCard;
+    this.clearCards = clearCards;
 
     this.API_URL = "";
     this.searchTerm = "";
@@ -15,8 +16,10 @@ class Form {
     this.searchInput.addEventListener("keyup", () => this.handleKeyup(event));
 
     this.submitbutton = document.querySelector('button[type="submit"]');
-
     this.submitbutton.disabled = !this.searchTerm;
+
+    this.clearbutton = document.querySelector('button[type="button"]');
+    this.clearbutton.addEventListener('click', ()=> this.clearCards())
 
     this.form = document.querySelector("form");
     this.form.addEventListener("submit", () => this.handleSubmit(event));
