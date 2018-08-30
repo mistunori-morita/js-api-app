@@ -34,10 +34,17 @@ class Form {
     axios
     .get(this.API_URL)
     .then(({ data }) => this.addCard(data))
-    .catch(err => console.error("Promise rejected !", err));
+      .catch(err => this.formError("Promise rejected !", err));
 
     this.form.reset()
 
+  }
+
+  formError(err){
+    console.log(err);
+    const errorText = document.createElement('p');
+    errorText.innerText = 'no user found'
+    this.form.appendChild(errorText);
   }
 
 
