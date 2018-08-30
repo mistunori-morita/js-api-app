@@ -1,4 +1,6 @@
 import Form from './Form';
+import CardList from './CardList'
+
 
 class App {
   constructor(){
@@ -9,10 +11,12 @@ class App {
 
   addCard(data){
     this.cards = [...this.cards, data];
-    console.log(this.cards)    
+    CardList(this.cards)
   }
 }
 
 
 const app = new App();
 const form = new Form(app.addCard);
+
+export const render = (html, node) => (node.innerHTML = html);
