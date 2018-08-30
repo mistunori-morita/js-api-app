@@ -43,8 +43,13 @@ class Form {
   formError(err){
     console.log(err);
     const errorText = document.createElement('p');
-    errorText.innerText = 'no user found'
+    errorText.style.color = "red";
+    errorText.style.fontStyle = "bold";
+    errorText.style.fontSize = "2rem";
+    errorText.innerText = 'no user found';
     this.form.appendChild(errorText);
+
+    setTimeout(() => this.form.removeChild(errorText), 3000);
   }
 
 
