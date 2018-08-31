@@ -12,7 +12,7 @@ module.exports = {
 ```
 
 ## bablercのセッティング
-- bable-loaderでこける場合は、verに注意！８・３０日時点でver8に上がっているので、下記の最新版だと効かない
+- bable-loaderでこける場合は、verに注意！８・３０日時点でver8に上がっているので、bableをそのままnpmした最新版だと動かないかも
 ```js
   module: {
     rules: [
@@ -25,3 +25,7 @@ module.exports = {
     ]
   }
 ```
+
+
+## 完成図
+![完成図](./img/1.gif)
